@@ -20,3 +20,9 @@ guests.splice(indexToRemove, 1);
 
 //Caesar wants to send a special invite to the first three guests on the list. Extract these names into a new array.
 const firstThreeElements = guests.splice(0,3)
+
+//Caesar decides he wants the guest list in alphabetical order. Sort the array. However, Caesar wants his most honored guests (those added first) to remain at the top of the list. Can you think of a way to sort the guests but keep the honored ones at the top?
+const honoredGuests = guests.slice(0, 2); // Extracts honored guests.
+const otherGuests = guests.slice(2); // Extracts the rest of the guests.
+otherGuests.sort(); // Sorts the other guests.
+const sortedGuests = honoredGuests.concat(otherGuests); // Combines both arrays.
